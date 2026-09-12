@@ -1,9 +1,10 @@
-#### EDMC-StreamHUD
-A lightweight, real-time EDMC plugin for OBS streamers, designed specifically for explorers and exobiologists to track session stats, earnings, and un-sold discovery risks.
 
-### EDMC-StreamHUD
+<div align="center">
 
-A lightweight, real-time Elite Dangerous Market Connector (EDMC) plugin and OBS overlay designed specifically for explorers, exobiologists, and content creators. It tracks your live navigation metrics, session earnings, and un-sold discovery risks, feeding them instantly into OBS via a clean, customizable HTML overlay.
+
+# EDMC-StreamHUD
+
+> #### A lightweight, real-time Elite Dangerous Market Connector (EDMC) plugin and OBS overlay designed specifically for explorers, exobiologists, and content creators. It tracks your live navigation metrics, session earnings, and un-sold discovery risks, feeding them instantly into OBS via a clean, customizable HTML overlay.
 
 ---
 

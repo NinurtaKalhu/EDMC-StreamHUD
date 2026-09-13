@@ -312,14 +312,12 @@ def generate_html():
     weight_value = "700" if cfg.get("font_bold", True) else "400"
     weight_label = "600" if cfg.get("label_bold", True) else "400"
 
-    direction = "column" if cfg.get("layout", "vertical") == "vertical" else "row"
     font_family = cfg.get("font_family", "Segoe UI")
     font_size = int(cfg.get("font_size", 22))
     label_font_size = int(cfg.get("label_font_size", 16))
 
     font_color = cfg.get("font_color", "#FFFFFF")
     label_color = cfg.get("label_color", "#7FDBFF")
-    margin_css = "margin-right: 16px;" if direction == "row" else ""
 
     rows_html = []
     for dom_id, label in FIELD_ROWS:
@@ -335,8 +333,9 @@ def generate_html():
 <meta charset="utf-8">
 <style>
   html, body {{ margin: 0; padding: 0; background: transparent; overflow: hidden; font-family: "{font_family}", sans-serif; }}
-  .hud {{ display: inline-flex; flex-direction: {direction}; gap: 4px; padding: 12px 16px; {bg_css} border-radius: 8px; width: fit-content; }}
-  .row {{ display: none; gap: 10px; align-items: baseline; white-space: nowrap; {margin_css} }}
+  .hud {{ display: inline-flex; flex-direction: column; gap: 4px; padding: 12px 16px; {bg_css} border-radius: 8px; width: fit-content; }}
+  .hud.layout-horizontal {{ flex-direction: row; flex-wrap: wrap; width: 100%; max-width: 100vw; column-gap: 16px; row-gap: 6px; }}
+  .row {{ display: none; gap: 10px; align-items: baseline; white-space: nowrap; }}
   .label {{ color: {label_color}; font-weight: {weight_label}; font-size: {label_font_size}px; font-family: "{font_family}", sans-serif; }}
   .value {{ color: {font_color}; font-weight: {weight_value}; font-size: {font_size}px; font-family: "{font_family}", sans-serif; {shadow_css} transition: all 0.2s ease-in-out; }}
 </style>
@@ -350,7 +349,14 @@ def generate_html():
       try {{
         const res = await fetch('HUD.json?t=' + Date.now(), {{cache: 'no-store'}});
         const data = await res.json();
+
+        const hud = document.querySelector('.hud');
+        if (hud) {{
+          hud.classList.toggle('layout-horizontal', data.layout === 'horizontal');
+        }}
+
         for (const key in data) {{
+          if (key === 'layout') continue;
           const el = document.getElementById(key);
           const row = document.getElementById('row-' + key);
           if (el && row) {{
@@ -395,6 +401,7 @@ def update_hud_file():
     body_val = saved_state['body']
 
     data = {
+        "layout": cfg.get("layout", "vertical"),
         "cmdr": saved_state["cmdr"] if (cfg.get("show_cmdr") and saved_state["cmdr"]) else "HIDE",
         "time": calculate_time() if cfg.get("show_time") else "HIDE",
         "system": saved_state["system"] if (cfg.get("show_system") and saved_state["system"]) else "HIDE",

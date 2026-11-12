@@ -152,5 +152,7 @@ Files are written atomically, so OBS never reads a half-written file.
 GPL-3.0-or-later.
 
 
-<img width="648" height="638" alt="EDMC-StreamHUD-001" src="https://github.com/user-attachments/assets/cdb0ec48-9c30-4463-9f0e-a7f03b8d5dac" />
-<img width="654" height="639" alt="EDMC-StreamHUD-002" src="https://github.com/user-attachments/assets/94db4daa-ae68-46a4-8c5d-ac6b8aa0405c" />
+<img width="648" height="638" alt="EDMC-StreamHUD-001" src="https://github.com/NinurtaKalhu/EDMC-StreamHUD/Screenshots/InGame.png" />
+<img width="654" height="639" alt="EDMC-StreamHUD-002" src="https://github.com/NinurtaKalhu/EDMC-StreamHUD/Screenshots/DataMod.png" />
+<img width="654" height="639" alt="EDMC-StreamHUD-003" src="https://github.com/NinurtaKalhu/EDMC-StreamHUD/Screenshots/Style.png" />
+<img width="654" height="639" alt="EDMC-StreamHUD-003" src="https://github.com/NinurtaKalhu/EDMC-StreamHUD/Screenshots/Output.png" />

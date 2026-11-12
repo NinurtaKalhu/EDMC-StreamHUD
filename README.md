@@ -152,7 +152,7 @@ Files are written atomically, so OBS never reads a half-written file.
 GPL-3.0-or-later.
 
 
-<img width="648" height="638" alt="EDMC-StreamHUD-001" src="https://github.com/NinurtaKalhu/EDMC-StreamHUD/Screenshots/InGame.png" />
-<img width="654" height="639" alt="EDMC-StreamHUD-002" src="https://github.com/NinurtaKalhu/EDMC-StreamHUD/Screenshots/DataMod.png" />
-<img width="654" height="639" alt="EDMC-StreamHUD-003" src="https://github.com/NinurtaKalhu/EDMC-StreamHUD/Screenshots/Style.png" />
-<img width="654" height="639" alt="EDMC-StreamHUD-003" src="https://github.com/NinurtaKalhu/EDMC-StreamHUD/Screenshots/Output.png" />
+<img width="648" height="638" alt="EDMC-StreamHUD-001" src="https://github.com/NinurtaKalhu/EDMC-StreamHUD/blob/main/Screenshots/InGame.png" />
+<img width="654" height="639" alt="EDMC-StreamHUD-002" src="https://github.com/NinurtaKalhu/EDMC-StreamHUD/blob/main/Screenshots/DataMod.png" />
+<img width="654" height="639" alt="EDMC-StreamHUD-003" src="https://github.com/NinurtaKalhu/EDMC-StreamHUD/blob/main/Screenshots/Style.png" />
+<img width="654" height="639" alt="EDMC-StreamHUD-003" src="https://github.com/NinurtaKalhu/EDMC-StreamHUD/blob/main/Screenshots/Output.png" />
